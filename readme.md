@@ -4,8 +4,8 @@
 Path: `./config/default.json5`
 ```json
 {
-    port: 5000,
-    db: 'Mongodb URI'
+    PORT: 5000,
+    DB_URL: 'Mongodb URI'
 }
 ```
 #### Install dependencies

@@ -2,7 +2,7 @@ const config = require('config');
 const db = require('./connectors/db');
 const app = require('./app');
 
-const PORT = config.get('port');
+const PORT = process.env.PORT || config.get('PORT');
 
 (async () => {
     await db.connect();

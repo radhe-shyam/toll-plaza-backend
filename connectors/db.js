@@ -10,7 +10,7 @@ const connect = async () => {
         const mockgoose = new Mockgoose(mongoose);
         await mockgoose.prepareStorage();
     }
-    return mongoose.connect(config.get('db'), {
+    return mongoose.connect(process.env.DB_URL || config.get('DB_URL'), {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
